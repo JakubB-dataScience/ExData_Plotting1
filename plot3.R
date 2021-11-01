@@ -35,12 +35,12 @@ consumption$dateTime2 <- as.POSIXct(dateTime2)
 
 ## plot 3
 with(consumption, {
-  plot(Sub_metering_1~dateTime2, type="l", ylab="Global Active Power (kilowatts)", xlab="")
+  plot(Sub_metering_1~dateTime2, type="l", ylab="Energy sub metering", xlab="")
   lines(Sub_metering_2~dateTime2,col='Red')
   lines(Sub_metering_3~dateTime2,col='Blue')
 })
 legend("topright", col=c("black", "red", "blue"), lwd=c(1,1,1), c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
-## saving as PNG
+# saving as PNG
 dev.copy(png, file="plot3.png", height=480, width=480)
 dev.off()
